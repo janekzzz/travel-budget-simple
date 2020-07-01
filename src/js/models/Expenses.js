@@ -8,27 +8,27 @@ export default class Expenses {
     this.total = 0;
   }
 
-  async getExpenses() {
-    try {
-      const res = await axios(`http://127.0.0.1:3001/api/v1/expenses/`);
-      if (res.data.data[0]) {
-        const results = res.data.data[0].expenses;
+  // async getExpenses() {
+  //   try {
+  //     const res = await axios(`http://127.0.0.1:3001/api/v1/expenses/`);
+  //     if (res.data.data[0]) {
+  //       const results = res.data.data[0].expenses;
 
-        results.forEach((el) => {
-          this.expenses.push(
-            new Expense(
-              el.name,
-              el.cost,
-              el.currency,
-              `${el.category} ${el.categoryShort}`
-            )
-          );
-        });
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  //       results.forEach((el) => {
+  //         this.expenses.push(
+  //           new Expense(
+  //             el.name,
+  //             el.cost,
+  //             el.currency,
+  //             `${el.category} ${el.categoryShort}`
+  //           )
+  //         );
+  //       });
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   persistData(id='1') {
     localStorage.setItem(`expenses: ${id}`, JSON.stringify(this.expenses));
