@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip Budget App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Jost&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="row head">
+      <div class="head__top">
+        <div>🌞💰 Trip Budget App</div>
+        <div>
+          <ion-icon name="menu-outline" class="menu-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="row head__links">
+      <div class="head__links-child">
+        <ul class="head__links-ul">
+          <li>
+            <a href="#"
+              ><ion-icon name="add-circle-outline"></ion-icon>&nbsp;Add new
+              trip</a
+            >
+          </li>
+        </ul>
+        
+      <div class="by">© Jan Zajas 2020</div>
+      </div>
+    </div>
+
+    <div class="start row">
+      <form class="start__form">
+        Name of your trip 🌴
+        <input
+          type="text"
+          class="start__form-name"
+          placeholder="type the name"
+        />
+        When did you start your trip? 😎
+        <input
+          class="start__form-start-date"
+          type="date"
+          placeholder="first day of your trip"
+        />
+        When was the last day? 😭
+        <input
+          class="start__form-end-date"
+          type="date"
+          placeholder="last day of your trip"
+        />
+        <button class="input__add-btn start-btn">Continue</button>
+      </form>
+    </div>
+
+    <div class="trip row hidden">
+      <div class="trip__back">
+        <div class="dropdown"></div>
+      </div>
+      <!--
+      <div class="trip__currency-change input__currency-change">
+        <input
+          id="input__currency-change"
+          class="input__currency-change"
+          list="currencies"
+          placeholder="EUR"
+          value="EUR"
+        />
+      </div>-->
+      <div class="trip__header">
+        <h1 class="trip__header-name">Trip to Spain</h1>
+      </div>
+      <div class="trip__details">
+        <ion-icon name="calendar-outline"></ion-icon>&nbsp;
+        <span class="trip__header-date">23/04/20 - 29/04/20</span>
+      </div>
+
+      <div class="stats__total">
+        <div>
+          <h3 class="stats__total-total">
+            <ion-icon name="pricetags-outline"></ion-icon>0<span
+              >&nbsp; EUR</span
+            >
+          </h3>
+          <p class="stats__total-undertext">total expense</p>
+        </div>
+        <div>
+          <h4 class="stats__total-daily">
+            <ion-icon name="pricetag-outline"></ion-icon>0<span
+              >&nbsp; EUR
+            </span>
+          </h4>
+          <p class="stats__total-undertext">daily expense</p>
+        </div>
+      </div>
+    </div>
+    <div class="stats row hidden">
+      <div class="stats__categories">
+        <p>Start typing in expenses below...</p>
+      </div>
+    </div>
+
+    <div class="row input hidden">
+      <div class="form">
+        <form>
+          <input id="input__name" type="text" placeholder="What did you buy?" />
+          <input
+            id="input__price"
+            type="number"
+            placeholder="How much was it?"
+            step="0.01"
+          />
+          <input
+            id="input__category"
+            list="categories"
+            placeholder="Category"
+          />
+          <input
+            id="input__currency"
+            list="currencies"
+            placeholder="EUR"
+            value="EUR"
+          />
+          <datalist id="currencies">
+            <option value="EUR"></option>
+            <option value="USD"></option>
+            <option value="CAD"></option>
+            <option value="HKD"></option>
+            <option value="ISK"></option>
+            <option value="PHP"></option>
+            <option value="DKK"></option>
+            <option value="HUF"></option>
+            <option value="CZK"></option>
+            <option value="AUD"></option>
+            <option value="RON"></option>
+            <option value="SEK"></option>
+            <option value="IDR"></option>
+            <option value="INR"></option>
+            <option value="BRL"></option>
+            <option value="RUB"></option>
+            <option value="HRK"></option>
+            <option value="JPY"></option>
+            <option value="THB"></option>
+            <option value="CHF"></option>
+            <option value="SGD"></option>
+            <option value="PLN"></option>
+            <option value="BGN"></option>
+            <option value="TRY"></option>
+            <option value="CNY"></option>
+            <option value="NOK"></option>
+            <option value="NZD"></option>
+            <option value="ZAR"></option>
+            <option value="MXN"></option>
+            <option value="ILS"></option>
+            <option value="GBP"></option>
+            <option value="KRW"></option>
+            <option value="MYR"></option>
+          </datalist>
+          <datalist id="categories">
+            <option value="Accomodation 🏨"> </option>
+            <option value="Eating out 🍴"> </option>
+            <option value="Flight tickets 🛫"></option>
+            <option value="Transportation 🚌"></option>
+            <option value="Attractions 🎳"></option>
+
+            <option value="Car rental 🚗"></option>
+            <option value="Fuel ⛽"></option>
+
+            <option value="Other 💡"></option>
+            <option value="Party 🥂"></option>
+          </datalist>
+        </form>
+        <div class="input__add">
+          <button class="input__add-btn" id="input__add-btn">
+            Add expense
+          </button>
+        </div>
+      </div>
+      <div class="input__expense">
+        <table class="input__expenses-list">
+          <tbody id="table">
+            <tr class="expense__row" id="1">
+              <td class="expense__row-title">
+                <ion-icon
+                  name="swap-vertical-outline"
+                  class="expense__row-title-sort"
+                ></ion-icon
+                >&nbsp;Expense:
+              </td>
+              <td class="expense__row-price expense__row-price-first">
+                <ion-icon
+                  name="swap-vertical-outline"
+                  class="expense__row-price-sort"
+                ></ion-icon
+                >&nbsp;EUR
+              </td>
+              <td class="expense__row-category">
+                <ion-icon
+                  name="swap-vertical-outline"
+                  class="expense__row-category-sort"
+                ></ion-icon>
+              </td>
+              <td class="expense__row-delete"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </body>
+</html>

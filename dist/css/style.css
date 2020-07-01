@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Jost;
+  font-size: 18px;
+  background: rgb(226, 226, 226);
+  margin: 6px;
+}
+.start__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+h1 {
+  width: 100%;
+  font-size: 280%;
+  font-weight: 800;
+  color: white;
+  margin: 20px 0 0 0;
+  /*
+  background-image: linear-gradient(45deg, #3498db, #feca57);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  */
+}
+
+.row {
+  margin: 0 auto;
+  background-color: white;
+  max-width: 400px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 4px 4px 8px  rgb(175, 175, 175);
+}
+
+.trip__details {
+  font-size: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trip__header {
+  background: linear-gradient(#dd9801, #dd9801, #feca57);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+.trip {
+  text-align: center;
+  position: relative;
+}
+.trip__back {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transition: all 0.5s ;
+}
+.trip__currency-change {
+  position: absolute;
+
+  right: 0px;
+  transform: translateX(20%);
+}
+.input__currency-change {
+  background: transparent;
+}
+
+h3,
+h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-bottom: 4px solid #feca57;
+  padding: 0px 10px;
+  font-size: 140%;
+  font-weight: 800;
+  margin-bottom: 0px;
+}
+h3 ion-icon,
+h4 ion-icon {
+  font-size: 80%;
+  margin-right: 5px;
+}
+.stats__categories p {
+  text-align: center;
+}
+h3 span {
+  font-weight: 300;
+  font-size: 50%;
+}
+h4 span {
+  font-weight: 400;
+  font-size: 66%;
+}
+.stats__total-undertext {
+  margin: 0 0 10px 0;
+}
+
+h4 {
+  font-size: 110%;
+  padding: 3px 5px;
+}
+.stats__total {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 20px;
+}
+.stats__categories {
+  flex: 0 0 50%;
+}
+
+.stats__categories-bar {
+  background-color: #feca57;
+  border-radius: 4px;
+  text-align: right;
+  position: relative;
+}
+.stats__categories-bar p {
+  position: absolute;
+  margin: 0;
+  right: 0;
+  top: 0;
+  transform: translateX(115%);
+}
+
+/*ACCORDION */
+.accordion {
+  display: flex;
+  align-items: center;
+  font-size: 100%;
+  font-family: Jost;
+  color: #444;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion:active {
+  background-color: #ccc;
+}
+
+.panel {
+  font-size: 70%;
+  max-height: 0;
+  display: block;
+  background-color: white;
+  overflow: hidden;
+  transition: all 0.4s;
+  margin-bottom: 7px;
+}
+
+/* */
+input {
+  width: 44%;
+  border: 1px #999 solid;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 70%;
+  font-family: Jost;
+  margin-bottom: 7px;
+}
+input:focus {
+  background-color: white;
+}
+
+form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+input {
+  text-align: center;
+  outline-color: #feb513;
+}
+.head {
+  border-radius: 4px;
+  background-color: white;
+  margin-bottom: 5px;
+  
+  box-shadow: 4px 4px 8px rgb(175, 175, 175);
+ 
+}
+.head__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head ion-icon {
+  font-size: 170%;
+  cursor: pointer;
+}
+
+.head__links {
+  background: none;
+  box-shadow: none;
+  text-align: right;
+  padding: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.5s;
+  margin-bottom: 5px;
+}
+
+.head__links-child {
+  display:block;
+  overflow: hidden;
+  max-height: 0px;
+  transition: all 0.5s;
+}
+
+ul {
+  right:0;
+  list-style: none;
+  font-family: Jost;
+  margin: 0;
+  padding: 0;
+}
+li:last-child {
+  border: 2px #feb513 solid;
+}
+.head__hidden{ 
+  display: none;
+  max-height:0;
+}
+.head__visible{
+  display:flex;
+  max-height: 1000px;
+}
+
+li {
+  
+  padding: 5px 5px 5px 10px;
+  background: white;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
+li:active,
+li:hover {
+  background: #feb513;
+}
+a {
+
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+a:visited {
+  color: black;
+}
+.active {
+  display:block;
+}
+table {
+  width: 100%;
+  text-align: left;
+}
+
+.expense__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  padding-left: 15px;
+  margin-bottom: 2px;
+}
+.expense__row td {
+  padding: 7px 0;
+  margin-right: 5px;
+}
+.expense__row-title {
+  display: flex;
+  align-items: center;
+  flex: 0 0 55%;
+}
+.by {
+  font-size: 70%;
+  color: #888;
+}
+.expense__row-price {
+  flex: 0 0 25%;
+  text-align: center;
+  background-color: #feca57;
+}
+.expense__row-price div {
+  padding: 0;
+  font-size: 60%;
+}
+.expense__row-category {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.expense__row-delete {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 5%;
+}
+.expense__row-delete-button:hover {
+  background-color: #ff6b6b;
+}
+
+.expense__row:first-of-type {
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 2px solid #999;
+  padding-bottom: 0px;
+}
+.input__add {
+  display: flex;
+  justify-content: center;
+}
+.input__add-btn {
+  font-family: Jost;
+  width: 80%;
+  background-color: #feca57;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 0;
+  box-shadow: 0px 6px 0px #cc8d01;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.input__add-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0px 3px 0px #cc8d01;
+}
+
+.expense__row-price-first {
+  background: none;
+  width: 50px;
+  display: flex;
+  align-items: center;
+}

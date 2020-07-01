@@ -1,0 +1,13 @@
+{
+    "expenses": [
+        {
+            "id:": 0,
+            "cost": 500.64,
+            "category": "accommodation",
+            "categoryShort": "bed",
+            "notes": "",
+            "currency": "USD",
+            "time": ""
+        }
+    ]
+}
